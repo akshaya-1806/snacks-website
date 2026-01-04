@@ -38,13 +38,29 @@
         /* Menu section */
         .menu {
             padding: 20px;
+        }
+
+        .menu h2 {
             text-align: center;
+        }
+
+        .menu > p {
+            text-align: center;
+        }
+
+        .menu-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
         }
 
         .item {
             border: 1px solid #ccc;
-            padding: 10px;
-            margin: 10px;
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
         button {
@@ -52,6 +68,26 @@
             color: white;
             border: none;
             padding: 8px 15px;
+        }
+
+        /* Search bar */
+        .search-bar {
+            background-color: #f5f5f5;
+            padding: 15px 20px;
+            text-align: center;
+        }
+
+        .search-bar input {
+            padding: 8px 12px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .search-bar button {
+            margin-left: 10px;
+            padding: 8px 20px;
         }
 
         /* Footer */
@@ -75,6 +111,12 @@
         | Call: 1234567891
     </div>
 
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <input type="text" placeholder="Search for snacks...">
+        <button>Search</button>
+    </div>
+
     <!-- Hero -->
     <div class="hero">
         <h1>Homemade Delights</h1>
@@ -89,27 +131,43 @@
         <h2>Our Menu</h2>
         <p>Fresh homemade snacks for our neighborhood</p>
 
-        <div class="item">
-            <img src="images/murukku.jpg" alt="Murukku" width="200">
+        <div class="menu-items">
+            <div class="item">
+                <img src="images/murukku.jpg" alt="Murukku" width="200" height="200" style="object-fit: cover;">
 
-            <h3>Murukku</h3>
-            <p>Crunchy traditional snack</p>
-            <button>Add to Cart</button>
-        </div>
+                <h3>Murukku</h3>
+                <p>Crunchy traditional snack</p>
+                <button>Add to Cart</button>
+            </div>
 
-        <div class="item">
-             <img src="images/bananachips.jpg" alt="Banana Chips" width="200">
+            <div class="item">
+                 <img src="images/bananachips.jpg" alt="Banana Chips" width="200" height="200" style="object-fit: cover;">
 
-            <h3>Banana Chips</h3>
-            <p>Crispy and fresh</p>
-            <button>Add to Cart</button>
-        </div>
+                <h3>Banana Chips</h3>
+                <p>Crispy and fresh</p>
+                <button>Add to Cart</button>
+            </div>
 
-        <div class="item">
-            <img src="images/mixture.jpg" alt="Mixture" width="200">
-            <h3>Mixture</h3>
-            <p>Spicy and tasty mix</p>
-            <button>Add to Cart</button>
+            <div class="item">
+                <img src="images/mixture.jpg" alt="Mixture" width="200" height="200" style="object-fit: cover;">
+                <h3>Mixture</h3>
+                <p>Spicy and tasty mix</p>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="item">
+                <img src="images/paniyaram.jpg" alt="Jaggery Paniyaram" width="200" height="200" style="object-fit: cover;">
+                <h3>Jaggery Paniyaram</h3>
+                <p>Sweet traditional treat</p>
+                <button>Add to Cart</button>
+            </div>
+            
+            <div class="item">
+                <img src="images/gulab-jamun.jpg" alt="Gulab Jamun" width="200" height="200" style="object-fit: cover;">
+                <h3>Gulab Jamun</h3>
+                <p>Soft sweet balls in sugar syrup</p>
+                <button>Add to Cart</button>
+            </div>
         </div>
     </div>
 
