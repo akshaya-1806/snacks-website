@@ -10,7 +10,7 @@
             margin: 0;
         }
 
-        /* Navigation bar */
+        
         .nav {
             background-color: brown;
             color: white;
@@ -24,7 +24,7 @@
             font-weight: bold;
         }
 
-        /* Hero section */
+       
         .hero {
             background-image: url("images/snacks.jpg");
             background-size: cover;
@@ -33,7 +33,7 @@
             text-align: center;
         }
 
-        /* Menu section */
+        
         .menu {
             padding: 20px;
         }
@@ -68,7 +68,7 @@
             padding: 8px 15px;
         }
 
-        /* Search bar */
+        
         .search-bar {
             background-color: #f5f5f5;
             padding: 15px 20px;
@@ -88,19 +88,56 @@
             padding: 8px 20px;
         }
 
-        /* Footer */
+    
         .footer {
             background-color: brown;
             color: white;
             text-align: center;
             padding: 10px;
         }
+        /* Carousel Styles */
+        .carousel {
+            position: relative;
+            max-width: 100%;
+            margin: 30px auto;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .carousel img {
+            width: 100%;
+            display: none;
+        }
+
+        .carousel img.active {
+            display: block;
+        }
+
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: brown;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .carousel-btn.prev {
+            left: 10px;
+        }        .carousel-btn.next {
+            right: 10px;
+        }
+
+
     </style>
 </head>
 
 <body>
 
-    <!-- Navigation -->
+    
     <div class="nav">
         <a href="#">Home</a>
         <a href="#">Snacks</a>
@@ -109,13 +146,13 @@
         | Call: 1234567891
     </div>
 
-    <!-- Search Bar -->
+    
     <div class="search-bar">
         <input type="text" placeholder="Search for snacks...">
         <button>Search</button>
     </div>
 
-    <!-- Hero -->
+
     <div class="hero">
         <h1>Homemade Delights</h1>
         <p>Authentic South Indian Snacks & Savories</p>
@@ -124,7 +161,6 @@
         <button>Contact Us</button>
     </div>
 
-    <!-- Menu -->
     <div class="menu">
         <h2>Our Menu</h2>
         <p>Fresh homemade snacks for our neighborhood</p>
@@ -164,11 +200,13 @@
                 <h3>Gulab Jamun</h3>
                 <p>Soft sweet balls in sugar syrup</p>
                 <button>Add to Cart</button>
+                
             </div>
+            
+            
+            
         </div>
     </div>
-
-    <!-- Footer -->
     <div class="footer">
         <p>Homemade Delights</p>
         <p>Phone: 1234567891</p>
