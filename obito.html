@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Visiting Card</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --ink:#0f2a4a;        /* deep navy (left panel) */
+      --paper:#ffffff;      /* right panel background */
+      --accent:#5aa0ff;     /* subtle accent for icons/lines */
+      --text:#1a1a1a;       /* body text */
+      --muted:#5b6b7a;      /* secondary text */
+      --radius:16px;
+      --card-w: 360px;      /* standard 3.5in x 2in ≈ 336x192px; slightly larger for screen */
+      --card-h: 200px;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0; min-height:100vh; display:grid; place-items:center;
+      background:linear-gradient(135deg,#eef3f8,#f8fbff);
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--text);
+    }
+
+    .card{
+      width:var(--card-w); height:var(--card-h);
+      display:flex; overflow:hidden; border-radius:var(--radius);
+      box-shadow:0 10px 30px rgba(15,42,74,.15);
+      background:var(--paper);
+    }
+
+    /* Left panel (name + title) */
+    .left{
+      width:42%; background:var(--ink); color:#fff; padding:18px;
+      display:flex; flex-direction:column; justify-content:flex-end;
+      position:relative;
+    }
+    .brand-dot{
+      position:absolute; top:16px; left:16px; width:10px; height:10px;
+      background:var(--accent); border-radius:50%;
+      box-shadow:0 0 0 6px rgba(90,160,255,.15);
+    }
+    .name{
+      font-weight:800; font-size:1.15rem; letter-spacing:.5px; line-height:1.2;
+      text-transform:uppercase;
+    }
+    .title{
+      margin-top:6px; font-weight:600; font-size:.85rem; opacity:.9; letter-spacing:.3px;
+    }
+
+    /* Right panel (contacts) */
+    .right{
+      width:58%; padding:18px 18px 18px 20px; display:flex; flex-direction:column; gap:10px;
+      background:var(--paper);
+    }
+    .row{ display:flex; align-items:flex-start; gap:10px; }
+    .icon{
+      width:22px; height:22px; border-radius:6px; background:rgba(90,160,255,.12);
+      display:grid; place-items:center; color:var(--ink); font-size:.9rem; font-weight:700;
+    }
+    .label{ font-size:.72rem; color:var(--muted); }
+    .value{ font-size:.86rem; font-weight:600; color:var(--text); }
+
+    /* Divider accent */
+    .divider{
+      height:2px; width:100%; background:linear-gradient(to right, rgba(15,42,74,.08), rgba(90,160,255,.35));
+      border-radius:2px; margin:2px 0 4px;
+    }
+
+    /* Print tweaks */
+    @media print{
+      body{ background:#fff; }
+      .card{ box-shadow:none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- CARD -->
+  <section class="card" aria-label="Visiting card">
+    <div class="left">
+      <span class="brand-dot" aria-hidden="true"></span>
+      <div class="name">AGALIYA S</div>
+      <div class="title">Full Stack Trainee · JAS DigiCraftTek</div>
+    </div>
+
+    <div class="right">
+      <div class="divider" aria-hidden="true"></div>
+
+      <div class="row">
+        <div class="icon">☎</div>
+        <div>
+          <div class="label">Phone</div>
+          <div class="value">+919363941478</div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="icon">@</div>
+        <div>
+          <div class="label">Email</div>
+          <div class="value">agalyaagalya730@gmail.com</div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="icon">⌂</div>
+        <div>
+          <div class="label">Address</div>
+          <div class="value">Kottilpadu,Nagercoil, Tamil Nadu</div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="icon">🌐</div>
+        <div>
+          <div class="label">Portfolio</div>
+          <div class="value">agalya.dev</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
